@@ -1,0 +1,486 @@
+html, body {
+  -webkit-overflow-scrolling: touch;
+}
+
+body{
+  font-family: 'Merriweather', serif;
+}
+
+.main-content{
+  background-color: rgb(243, 240, 240);
+}
+.navbar{
+  background-color: rgb(243, 240, 240);;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  border-bottom: 1px solid #ddd;
+  transition: 0.4s;
+}
+
+.navbar.shrink {
+  padding: 10px 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar.shrink .navbar-brand {
+  font-size: 20px;
+}
+
+.navbar.shrink .nav-item {
+  margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+  .navbar.shrink .navbar-nav {
+    display: none;
+  }
+}
+
+
+.logo{
+  height: 80px;
+  width: 80px;
+}
+
+.instagram{
+  height: 20px;
+  width: 20px;
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.services a{  
+  color: grey;
+  text-decoration: none;
+}
+.navbar-collapse{
+  flex-grow: unset;
+}
+@media (max-width: 991px) {
+  .navbar-collapse {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-collapse {
+    text-align: center;
+  }
+}
+
+
+/* Default styles */
+.display-image {
+  position: relative;
+  height: 800px;
+  overflow: hidden;
+}
+
+.main-attraction {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+}
+
+.display-img-text {
+  position: absolute;
+  top: 60%;
+  right: 5%;
+  transform: translate(0%, -50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 360px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: 'Roboto Slab', serif;
+  z-index: 100;
+  padding: 290px 20px 200px 20px;
+}
+
+.works {
+  padding: 10px;
+  background-color: rgb(203, 185, 165);
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .display-image {
+    height: 800px;
+  }
+
+  .display-img-text {
+    max-width: none;
+    width: 80%;
+    top: 40%;
+    position: absolute;
+    left: 50%;
+    padding: 300px 0px 300px 0px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .display-image {
+    height: 800px;
+  }
+
+  .display-img-text {
+    top: 30%;
+  }
+}
+/* Media queries for tablets */
+@media (min-width: 768px) {
+  .navbar-collapse {
+    display: none !important;
+  }
+  .display-image-text {
+    position: absolute;
+    left: 0%;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+
+  .navbar-collapse.collapse.show {
+    display: flex !important;
+  }
+}
+
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .display-image {
+    height: 800px; /* Adjust the height for smaller screens */
+    width: auto;
+  }
+
+  .display-img-text {
+    max-width: none;
+    width: 80%;
+    top: 30%; /* Adjust the position for smaller screens */
+    transform: translate(-50%, -50%);
+    padding: 120px 20px; /* Adjust the padding for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .display-image {
+    height: 800px; /* Adjust the height for smaller screens */
+    width: auto;
+  }
+
+  .display-img-text {
+    top: 57%; /* Adjust the position for smaller screens */
+    padding-top: 180px  ; /* Adjust the padding for smaller screens */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 173px;
+  }
+}
+
+/* Quote */
+.quote {
+  text-align: center;
+  padding: 60px 0;
+  font-family: 'Merriweather', serif;
+  font-weight: 500;
+  background-color: rgb(243, 240, 240);;
+}
+.quote h1{
+  font-weight: 600;
+}
+/* Set height of all images to 300px */
+.image-container img {
+  height: 550px;
+}
+
+/* Background for the image-overlay text */
+.image-container {
+  position: relative;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-overlay h3 {
+  margin: 0;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+/* Position image overlay in bottom left corner */
+.image-overlay {
+  position: relative;
+  bottom: 105px;
+  left: 0px;
+  padding: 15px;
+  color: #fff;
+}
+
+/* Set font size and margin for image overlay title */
+.image-overlay h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Remove gutters between columns */
+.row {
+--bs-gutter-x: 0rem;
+}
+
+
+/* Set full width for all columns on tablets and larger screens */
+@media (min-width: 768px) {
+  .col-sm-6 {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/* Display only one image at a time on mobile screens */
+@media (max-width: 767px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .col-sm-6 {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .image-overlay{
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+    transition: none;  
+
+  }
+}
+@media only screen and (max-width: 767px) {
+  .image-container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: -51.5px;
+  }
+  .image-container img{
+    height: 400px;
+  }
+  .image-overlay-mobile{
+    position: relative;
+    bottom: 40px;
+  }
+  .image-overlay-b{
+    position: relative;
+    bottom: 52px;
+  }
+}
+
+#services{
+  background-color: rgb(243, 240, 240);
+}
+
+.about{
+  background-color: rgb(243, 240, 240);
+  margin-top: 60px;
+}
+
+.about-wrapper{
+  display: flex;
+  justify-content: center;
+  padding: 80px 80px;
+}
+.about-heading{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.make-order{
+  background-color: rgb(160, 133, 89);
+  
+}
+
+ /* Styles for mobile screens */
+
+ @media only screen and (max-width: 600px) {
+  .about{
+    margin-top: 20px;
+  }
+  .about-wrapper{
+    display: block;
+    padding: 15px;
+  }
+  .about-text-border{
+    border-top: 4px solid rgb(160, 133, 89);
+  }
+  .about-heading h1{
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .about-text{
+    margin-right: 15px;
+  }
+  .order{
+    width: max-content;
+    position: relative;
+    left: -30px;
+    top: -10px;
+    margin-bottom: 20px;
+  }
+}
+
+.order{
+  background-color: rgb(160, 133, 89);
+  position: relative;
+  top: 20px;
+}
+
+.carousel-cell{
+  width: 33%;
+  height: 500px;
+  margin-right: 10px;
+}
+.carousel-item{
+  display: inline;
+  height: 500px;
+}
+
+@media only screen and (max-width: 767px){ 
+  .carousel-cell{
+    width: 100%;
+    margin-right: 0;
+  }
+  .image-overlay{
+    position: relative;
+    bottom: 52px;
+  }
+}
+
+#order{
+  background-color: rgb(57, 56, 56);
+  padding: 100px;
+  color: #fff;
+
+}
+#order p{
+  font-size: 16px;
+}
+.contact-heading{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color: #fff;
+  margin-top: -50px;
+}
+.contact-heading h1{
+  font-weight: 700;
+}
+.details{
+  display: flex;
+  justify-content: center;
+}
+.details h5{
+  color: rgb(227, 184, 115);
+  font-weight: 600;
+}
+.phone-details{
+  width: 33%;
+  display: block;
+  float: left;
+  text-align: center;
+}
+.office-address{
+  display: block;
+  width: 33%;
+  float: left;
+  text-align: center;
+}
+.work-timings{
+  display: block;
+  width: 33%;
+  float: left;
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+  #order{
+    background-color: rgb(57, 56, 56);
+    padding: 50px 20px;
+    color: #fff;
+  }
+  #order p{
+    font-size: 16px;
+  }
+  .contact-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: -30px;
+  }
+  .contact-heading h1{
+    font-weight: 700;
+  }
+  .details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .details h5{
+    color: rgb(227, 184, 115);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .phone-details{
+    width: 100%;
+    text-align: center;
+  }
+  .office-address{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .work-timings{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+}
